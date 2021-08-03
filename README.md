@@ -26,7 +26,7 @@ Cos-Meet will provide a place for buyers and sellers to trade unwanted high-end 
 
 ***Sitemap***
 
-![readmeimages\Sitemap_T2A2(2).jpeg](readmeimages\Sitemap_T2A2(2).jpeg)
+![readmeimages/Sitemap_T2A2(2).jpeg](readmeimages/Sitemap_T2A2(2).jpeg)
 
 ***Screenshots***
 
