@@ -15,3 +15,39 @@
  */
 
  @import "bootstrap";
+
+ body {
+    background: #fff1ff;
+}
+
+.navbar-custom {
+    background-color: ef4626;
+}
+
+
+.jumbotron {
+    background: #ef4626;
+    border-radius: 1%;
+}
+
+.btn.btn-primary.btn-lg {
+    background: #fff1ff;
+    border: none
+    
+}
+
+a.btn.btn-primary.btn.btn-primary.btn-lg {
+    color: #111111;
+}
+
+.btn.btn-primary.btn-lg {
+    background: #fff1ff;
+    border: none;
+}
+
+
+
+
+a:hover {
+    color: #111111;
+}
