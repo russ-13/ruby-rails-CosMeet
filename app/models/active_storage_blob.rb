@@ -1,2 +1,0 @@
-class ActiveStorageBlob < ApplicationRecord
-end
