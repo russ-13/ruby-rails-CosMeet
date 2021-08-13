@@ -10,10 +10,67 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_06_062301) do
+ActiveRecord::Schema.define(version: 2021_08_13_022756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name"
+    t.string "record_type"
+    t.integer "blob_id"
+    t.integer "record_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key"
+    t.string "checksum"
+    t.string "service_name"
+    t.string "metadata"
+    t.string "content_type"
+    t.string "filename"
+    t.integer "byte_size"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.integer "ID"
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.integer "image_id"
+    t.integer "active_storage_key"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "listings", force: :cascade do |t|
+    t.integer "ID"
+    t.string "description"
+    t.float "price"
+    t.integer "category_id"
+    t.integer "image_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.integer "ID"
+    t.integer "user_id"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "street_name"
+    t.integer "street_number"
+    t.integer "postcode"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
