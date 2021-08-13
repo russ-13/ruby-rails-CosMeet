@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_13_022756) do
+ActiveRecord::Schema.define(version: 2021_08_13_023721) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2021_08_13_022756) do
   end
 
   create_table "active_storage_blobs", force: :cascade do |t|
+    t.integer "ID"
     t.string "key"
     t.string "checksum"
     t.string "service_name"
