@@ -1,6 +1,7 @@
 class CreateActiveStorageBlobs < ActiveRecord::Migration[6.0]
   def change
     create_table :active_storage_blobs do |t|
+      t.integer :ID
       t.string :key
       t.string :checksum
       t.string :service_name
