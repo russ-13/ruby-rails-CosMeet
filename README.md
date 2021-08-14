@@ -28,7 +28,19 @@ Cos-Meet will provide a place for buyers and sellers to trade unwanted high-end 
 
 ***Functionality/Features***
 
+# Login Feature
 
+This feature will allow users to authenticate with the suite of Devise functionality, including password recovery tools. 
+
+# Create listing Feature
+
+This allows users to create new listings end edit them after creation, attaching an image and providing a price, description, and choosing from a category.
+
+# View Store/Listings feature
+
+# Send Enquiry Feature
+
+This feature was abandoned due to the limits of my abilities. 
 
 ***Sitemap***
 
@@ -100,7 +112,13 @@ I had some initial wireframes that looked like the ones below, but they were cha
 
 ## ERD Details (14)
 
+My original EDR diagram was as follows:
 
+![readmeimages/DB.png](readmeimages/DB.png)
+
+After the app was completed it looked like this:
+
+![readmeimages/finalERD.JPG](readmeimages/finalERD.JPG)
 
 ## Explanation of High-Level Components (R15)
 
@@ -115,6 +133,7 @@ I had some initial wireframes that looked like the ones below, but they were cha
 The database schema image can be found below:
 
 ![readmeimages/Schema.JPG](readmeimages/Schema.JPG)
+
 
 ## Task Allocation (R20)
 
