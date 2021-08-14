@@ -10,13 +10,15 @@
 
 Quite often expensive cosmetics and beauty products go unused after a short novelty period, are purchased incorrectly, or received as unwanted gifts or samples; with perfume bottles worth hundreds of dollars sitting nearly full for years before being simply thrown out, with no centralized marketplace to trade these items to willing buyers. Many consumers build up large, expensive, and unused collections that do nothing but take up space in ever shrinking homes.
 
-This service would allow owners (sellers) of high-end cosmetics that will ordinarily go to waste or remain unused to pass on these products to willing buyers. There are currently drips and drabs of these products on various sites, but a centralized platform would entice buys in a big way, especially as some items are ludicrously expensive and out of reach by those with more realistic budgets.
+This service would allow owners (sellers) of high-end cosmetics that will ordinarily go to waste or remain unused to pass on these products to willing buyers. There are currently drips and drabs of these products on various sites, but a centralized platform would entice buys in a big way, especially as some items are ludicrously expensive and out of reach by those with more realistic budgets. This service will operating in the same vein as [LadyTradies](https://www.theladytradies.com.au/) providing cosmetics users a predominantly female marketplace and commuminty in which to operate, one that doesnt currently exist for sales of this type. 
 
 ## Deployed App URL (R9)
 
+
+
 ## Github Repo URL (R10)
 
-
+[Github Link](https://github.com/russ-13/CosMeet)
 
 ## App Description (R11)
 
@@ -26,17 +28,35 @@ Cos-Meet will provide a place for buyers and sellers to trade unwanted high-end 
 
 ***Functionality/Features***
 
+
+
 ***Sitemap***
 
 ![readmeimages/Sitemap_T2A2(2).jpeg](readmeimages/Sitemap_T2A2(2).jpeg)
 
+The original sitemap above was heavilly revised due to issues and the below map is more indicitive of the final product.
+
+![readmeimages/Sitemap2.JPG](readmeimages/Sitemap2.JPG)
+
 ***Screenshots***
+
+![readmeimages/screen1.JPG](readmeimages/screen1.JPG)
+
+![readmeimages/screen2.JPG](readmeimages/screen2.JPG)
+
+![readmeimages/screen3.JPG](readmeimages/screen3.JPG)
+
+![readmeimages/screen4.JPG](readmeimages/screen4.JPG)
+
+![readmeimages/screen5.JPG](readmeimages/screen5.JPG)
 
 ***Target Audience***
 
 The target audience for Cos-Meet are individuals who purchase high-end cosmetic products that build up a collection over time, and are those looking to obtain these products without paying full price. The target sellers would be individuals with large collections wanting their goods to go to a good home and not be wasted – while collecting money to ‘upgrade’ their collections with more relevant items. These items can be unwanted samples or gifts, but mainly expensive products that are no longer used after the original customer wants to try a different product, this is very common with lots of people accumulating a treasure trove barely used items that are taking up valuable space in the home.
 
 ***Tech Stack***
+
+
 
 ## User Stories (R12)
 
@@ -46,7 +66,21 @@ I'm Jennifer, and as consumer of cosmetics on a budget, I would like to buy high
 
 ## Wireframes (R13)
 
+I had some initial wireframes that looked like the ones below, but they were changed dramatically once the scope was revised mid-project. 
+
+![readmeimages/oframe1.jpg](readmeimages/oframe1.jpg)
+
+![readmeimages/oframe2.jpg](readmeimages/oframe2.jpg)
+
+![readmeimages/oframe3.jpg](readmeimages/oframe3.jpg)
+
+![readmeimages/oframe4.jpg](readmeimages/oframe4.jpg)
+
+The following wireframes were settled on after scope revision and the final product was modeled after these:
+
 ## ERD Details (14)
+
+
 
 ## Explanation of High-Level Components (R15)
 
@@ -57,6 +91,10 @@ I'm Jennifer, and as consumer of cosmetics on a budget, I would like to buy high
 ## Database Relations (R18)
 
 ## Database schema design (R19)
+
+The database schema image can be found below:
+
+![readmeimages/Schema.JPG](readmeimages/Schema.JPG)
 
 ## Task Allocation (R20)
 

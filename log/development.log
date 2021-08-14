@@ -6558,3 +6558,148 @@ puma (4.3.8) lib/puma/server.rb:718:in `handle_request'
 puma (4.3.8) lib/puma/server.rb:472:in `process_client'
 puma (4.3.8) lib/puma/server.rb:328:in `block in run'
 puma (4.3.8) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2021-08-14 15:39:31 +1000
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#page as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 1138.0ms | Allocations: 9782)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 2.9ms | Allocations: 200)
+Completed 200 OK in 1365ms (Views: 1307.4ms | ActiveRecord: 4.8ms | Allocations: 26862)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2021-08-14 15:39:39 +1000
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"urVbSGLcs3ULpr19h35DlYBtcrxwXamdIdTjJKPvgfs8qNqowQIJzo9N2k2VHUWeWIKsuzxBopmcS+YDVvehHQ=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 79ms (ActiveRecord: 0.4ms | Allocations: 4670)
+
+
+Started GET "/" for 127.0.0.1 at 2021-08-14 15:39:39 +1000
+Processing by HomeController#page as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 331)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2021-08-14 15:39:39 +1000
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.4ms | Allocations: 595)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 197.5ms | Allocations: 15428)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 60)
+Completed 200 OK in 354ms (Views: 345.8ms | ActiveRecord: 0.0ms | Allocations: 23760)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2021-08-14 15:50:20 +1000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"XFZESjihjpJJ9s/Muf4C6VZATUfGHfVvQFldPzmWFOoHmk436rhfIIVBQVwEZstttePd+IYHHyHX6mNL3uWBGQ==", "user"=>{"email"=>"russ@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "russ@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 291ms (ActiveRecord: 0.6ms | Allocations: 6770)
+
+
+Started GET "/" for 127.0.0.1 at 2021-08-14 15:50:20 +1000
+Processing by HomeController#page as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering home/page.html.erb within layouts/application
+  Rendered home/page.html.erb within layouts/application (Duration: 35.0ms | Allocations: 619)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.2ms | Allocations: 61)
+Completed 200 OK in 167ms (Views: 163.2ms | ActiveRecord: 0.3ms | Allocations: 8962)
+
+
+Started GET "/listings/new" for 127.0.0.1 at 2021-08-14 15:50:37 +1000
+Processing by ListingsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/_form.html.erb (Duration: 41.9ms | Allocations: 12369)
+  Rendered listings/new.html.erb within layouts/application (Duration: 52.1ms | Allocations: 12699)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 60)
+Completed 200 OK in 223ms (Views: 179.2ms | ActiveRecord: 3.6ms | Allocations: 27548)
+
+
+Started POST "/listings" for 127.0.0.1 at 2021-08-14 15:52:05 +1000
+Processing by ListingsController#create as HTML
+  Parameters: {"authenticity_token"=>"N1OKCnDU9ruVc3wS5E4Iat3Ik9weWL8r7FFAsEgrIY99Z7uDPgahvwFWDG4KxayjkOCr7FlT86T2szHtWPQkSw==", "listing"=>{"name"=>"New Product 2", "description"=>"This is the second new product!", "price"=>"12", "category"=>"Face Care", "picture"=>#<ActionDispatch::Http::UploadedFile:0x000055bac6b748d8 @tempfile=#<Tempfile:/tmp/RackMultipart20210814-402-c4nljk.JPG>, @original_filename="222.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"listing[picture]\"; filename=\"222.JPG\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Listing"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/listings_controller.rb:27:in `block in create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:27:in `block in create'
+  [1m[36mListing Create (0.8ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "price", "category", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "New Product 2"], ["description", "This is the second new product!"], ["price", 12.0], ["category", "Face Care"], ["user_id", 1], ["created_at", "2021-08-14 05:52:05.750755"], ["updated_at", "2021-08-14 05:52:05.750755"]]
+  ↳ app/controllers/listings_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "kmq8atkduvnaq252ixwdv0duh8hb"], ["filename", "222.JPG"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 15434], ["checksum", "F6fjI2AsqMGTchqRl2eOeg=="], ["created_at", "2021-08-14 05:52:05.873148"]]
+  ↳ app/controllers/listings_controller.rb:27:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Listing"], ["record_id", 6], ["blob_id", 3], ["created_at", "2021-08-14 05:52:05.876567"]]
+  ↳ app/controllers/listings_controller.rb:27:in `block in create'
+  [1m[36mListing Update (0.7ms)[0m  [1m[33mUPDATE "listings" SET "updated_at" = $1 WHERE "listings"."id" = $2[0m  [["updated_at", "2021-08-14 05:52:05.881875"], ["id", 6]]
+  ↳ app/controllers/listings_controller.rb:27:in `block in create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/listings_controller.rb:27:in `block in create'
+[36m  Disk Storage (20.3ms) [0m[32mUploaded file to key: kmq8atkduvnaq252ixwdv0duh8hb (checksum: F6fjI2AsqMGTchqRl2eOeg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: acda13c7-4833-4e98-a7d8-99162c8ede29) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055bac56e6768 @uri=#<URI::GID gid://cosmeet/ActiveStorage::Blob/3>>
+Redirected to http://localhost:3000/listings/6
+Completed 302 Found in 290ms (ActiveRecord: 10.7ms | Allocations: 37548)
+
+
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [acda13c7-4833-4e98-a7d8-99162c8ede29] Performing ActiveStorage::AnalyzeJob (Job ID: acda13c7-4833-4e98-a7d8-99162c8ede29) from Async(active_storage_analysis) enqueued at 2021-08-14T05:52:05Z with arguments: #<GlobalID:0x000055bac54da5f0 @uri=#<URI::GID gid://cosmeet/ActiveStorage::Blob/3>>
+Started GET "/listings/6" for 127.0.0.1 at 2021-08-14 15:52:06 +1000
+[ActiveJob] [ActiveStorage::AnalyzeJob] [acda13c7-4833-4e98-a7d8-99162c8ede29] [36m  Disk Storage (4.6ms) [0m[34mDownloaded file from key: kmq8atkduvnaq252ixwdv0duh8hb[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [acda13c7-4833-4e98-a7d8-99162c8ede29] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [acda13c7-4833-4e98-a7d8-99162c8ede29]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [acda13c7-4833-4e98-a7d8-99162c8ede29]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [acda13c7-4833-4e98-a7d8-99162c8ede29]   [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [acda13c7-4833-4e98-a7d8-99162c8ede29] Performed ActiveStorage::AnalyzeJob (Job ID: acda13c7-4833-4e98-a7d8-99162c8ede29) from Async(active_storage_analysis) in 40.38ms
+Processing by ListingsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/listings_controller.rb:62:in `set_listing'
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 6], ["record_type", "Listing"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/listings/show.html.erb:23
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/listings/show.html.erb:23
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/listings/show.html.erb:27
+  Rendered listings/show.html.erb within layouts/application (Duration: 16.1ms | Allocations: 3524)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 61)
+Completed 200 OK in 160ms (Views: 139.1ms | ActiveRecord: 2.4ms | Allocations: 12994)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--883e2a7e7804a36dc17483a509acead077ba833a/222.JPG" for 127.0.0.1 at 2021-08-14 15:52:06 +1000
+Processing by ActiveStorage::BlobsController#show as 
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--883e2a7e7804a36dc17483a509acead077ba833a", "filename"=>"222"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (1.1ms) [0m[34mGenerated URL for file at key: kmq8atkduvnaq252ixwdv0duh8hb (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhMjF4T0dGMGEyUjFkbTVoY1RJMU1tbDRkMlIyTUdSMWFEaG9ZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJeU1pNUtVRWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU1pNUtVRWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMS0wOC0xNFQwNTo1NzowNi4zOTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6638bf1e015cbb77688c5d93dbe068616f9d390/222.JPG?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22222.JPG%22%3B+filename%2A%3DUTF-8%27%27222.JPG)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhMjF4T0dGMGEyUjFkbTVoY1RJMU1tbDRkMlIyTUdSMWFEaG9ZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJeU1pNUtVRWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU1pNUtVRWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMS0wOC0xNFQwNTo1NzowNi4zOTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6638bf1e015cbb77688c5d93dbe068616f9d390/222.JPG?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22222.JPG%22%3B+filename%2A%3DUTF-8%27%27222.JPG
+Completed 302 Found in 12ms (ActiveRecord: 0.4ms | Allocations: 2234)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhMjF4T0dGMGEyUjFkbTVoY1RJMU1tbDRkMlIyTUdSMWFEaG9ZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJeU1pNUtVRWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU1pNUtVRWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMS0wOC0xNFQwNTo1NzowNi4zOTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6638bf1e015cbb77688c5d93dbe068616f9d390/222.JPG?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22222.JPG%22%3B+filename%2A%3DUTF-8%27%27222.JPG" for 127.0.0.1 at 2021-08-14 15:52:06 +1000
+Processing by ActiveStorage::DiskController#show as 
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"222.JPG\"; filename*=UTF-8''222.JPG", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhMjF4T0dGMGEyUjFkbTVoY1RJMU1tbDRkMlIyTUdSMWFEaG9ZZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpT1dsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpJeU1pNUtVRWNpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSnpJeU1pNUtVRWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc5cGJXRm5aUzlxY0dWbkJqc0dWQT09IiwiZXhwIjoiMjAyMS0wOC0xNFQwNTo1NzowNi4zOTFaIiwicHVyIjoiYmxvYl9rZXkifX0=--d6638bf1e015cbb77688c5d93dbe068616f9d390", "filename"=>"222"}
+Completed 200 OK in 6ms (ActiveRecord: 0.0ms | Allocations: 444)
+
+
+Started GET "/listings" for 127.0.0.1 at 2021-08-14 15:52:42 +1000
+Processing by ListingsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/index.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  ↳ app/views/listings/index.html.erb:18
+  Rendered listings/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1657)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered partials/_navbar.html.erb (Duration: 0.1ms | Allocations: 61)
+Completed 200 OK in 163ms (Views: 151.7ms | ActiveRecord: 0.7ms | Allocations: 10221)
+
+
