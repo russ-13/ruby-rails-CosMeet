@@ -57,6 +57,12 @@ The target audience for Cos-Meet are individuals who purchase high-end cosmetic 
 ***Tech Stack***
 
 
+    Ruby
+    Ruby on Rails
+    HTML
+    CSS/SCSS
+    Postgresql
+
 
 ## User Stories (R12)
 
@@ -66,7 +72,7 @@ I'm Jennifer, and as consumer of cosmetics on a budget, I would like to buy high
 
 ## Wireframes (R13)
 
-I had some initial wireframes that looked like the ones below, but they were changed dramatically once the scope was revised mid-project. 
+I had some initial wireframes that looked like the ones below, but they were changed dramatically once the scope was revised mid-project. The set following were settled on after scope revision and the final product was modeled after these:
 
 ![readmeimages/oframe1.jpg](readmeimages/oframe1.jpg)
 
@@ -76,7 +82,21 @@ I had some initial wireframes that looked like the ones below, but they were cha
 
 ![readmeimages/oframe4.jpg](readmeimages/oframe4.jpg)
 
-The following wireframes were settled on after scope revision and the final product was modeled after these:
+
+
+## The following wireframes were settled on after scope revision and the final product was modeled after these:
+
+
+
+![readmeimages/nframe1.jpg](readmeimages/nframe1.JPG)
+
+![readmeimages/nframe2.jpg](readmeimages/nframe2.JPG)
+
+![readmeimages/nframe3.jpg](readmeimages/nframe3.JPG)
+
+![readmeimages/nframe4.jpg](readmeimages/nframe4.JPG)
+
+![readmeimages/nframe5.jpg](readmeimages/nframe5.JPG)
 
 ## ERD Details (14)
 
