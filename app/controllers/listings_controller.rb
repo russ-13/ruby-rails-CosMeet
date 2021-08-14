@@ -2,7 +2,7 @@ class ListingsController < ApplicationController
   before_action :set_listing, only: %i[ show edit update destroy ]
 
   # GET /listings or /listings.json
-  def index
+  def index         #code for showing all the listings in the database
     @listings = Listing.all
   end
 
@@ -22,7 +22,7 @@ class ListingsController < ApplicationController
   # POST /listings or /listings.json
   def create
     @listing = Listing.new(listing_params)
-
+    @listing.user_id = current_user.id      #code for creating a listing in the database
     respond_to do |format|
       if @listing.save
         format.html { redirect_to @listing, notice: "Listing was successfully created." }
@@ -36,7 +36,7 @@ class ListingsController < ApplicationController
 
   # PATCH/PUT /listings/1 or /listings/1.json
   def update
-    respond_to do |format|
+    respond_to do |format|      #code for updating a listing in the database
       if @listing.update(listing_params)
         format.html { redirect_to @listing, notice: "Listing was successfully updated." }
         format.json { render :show, status: :ok, location: @listing }
@@ -49,7 +49,7 @@ class ListingsController < ApplicationController
 
   # DELETE /listings/1 or /listings/1.json
   def destroy
-    @listing.destroy
+    @listing.destroy      #code for deteling a listing in the database
     respond_to do |format|
       format.html { redirect_to listings_url, notice: "Listing was successfully destroyed." }
       format.json { head :no_content }
@@ -64,6 +64,6 @@ class ListingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def listing_params
-      params.require(:listing).permit(:name, :description, :price, :category, :user_id)
+      params.require(:listing).permit(:name, :description, :price, :category, :picture, :user_id)  #only allow the params we set up
     end
 end

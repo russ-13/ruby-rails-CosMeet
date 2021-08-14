@@ -19,10 +19,12 @@
   <strong>Category:</strong>
   <%= @listing.category %>
 </p>
-
+<p> 
+  <%= image_tag @listing.picture %> 
+</p>
 <p>
   <strong>User:</strong>
-  <%= @listing.user_id %>
+  <%= @listing.user.email %>
 </p>
 
 <%= link_to 'Edit', edit_listing_path(@listing) %> |

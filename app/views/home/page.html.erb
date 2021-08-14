@@ -4,12 +4,14 @@
             <h1 class="display-4">Cos-Meet</h1> 
             <p class="lead">Welcome to the Cos-Meet marketplace!</p>
             <hr class="my-4"> 
-            <p class="lead"> 
-                <a class="btn btn-primary btn-lg" href="#" role="button">View Listings</a> 
-            </p> 
+             <p class="lead"> <%= link_to "Add Listing", new_listing_path, class: "btn btn-primary btn-lg" %></p> 
+            <p class="lead"> <%= link_to "View Store", store_page_path, class: "btn btn-primary btn-lg" %></p> 
+
         </div> 
 
         <%= image_tag 'Title.png', class: "notepadimage" %>
         
         </div> 
     </div> 
+
+
