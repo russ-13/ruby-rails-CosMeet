@@ -14,7 +14,7 @@ This service would allow owners (sellers) of high-end cosmetics that will ordina
 
 ## Deployed App URL (R9)
 
-
+Unfortunatly I was receiving a plethora of errors trying to get Heroku up and running, and I have to submit this assignment without it being deployed. The windows installation is very complex and I have no idea how to proceed with no educators available.
 
 ## Github Repo URL (R10)
 
@@ -37,6 +37,8 @@ This feature will allow users to authenticate with the suite of Devise functiona
 This allows users to create new listings end edit them after creation, attaching an image and providing a price, description, and choosing from a category.
 
 # View Store/Listings feature
+
+This allows users to look at all the available listings once looked in. 
 
 # Send Enquiry Feature
 
@@ -122,11 +124,59 @@ After the app was completed it looked like this:
 
 ## Explanation of High-Level Components (R15)
 
+This project features models, views and controller, as is the RoR convention. 
+
+The models used were PotgreSQL databasing, and contained the databases for listings, users, and the active storgae information for uploaded images. 
+
+The rails router contains a list of routes that exist within the application, and pushes them onto the next step, ie the controller. 
+
+THe views contained in the project included some 'partials' which are featured on every page.
+
+The controllers I used were one Application controller, a 'master' controller. 
+-Listings controller, responsable for reading the data in models and providing it to the user in the form of a view.
+-Home controller, which governed what was given to the view when on the home page.
+-Store controller, which was responsable for reading the data in the store database and responding to requests by the user.
+
+
 ## Third Party Services Used (R16)
+      
+Balsamiq: Was used to create the wireframes during the planning phase of the app.
+    
+Trello: Trello is a project managment tool which i used to track and plan my progress and due dates.
+   
+Simpleform: This is a Ruby Gem for creating simple forms, their assosiations and functions.
+
+Bootstrap 5: Bootstrap is another Ruby gem for assembling boilerplate style HTML and CSS styling.
+
+Devise: Devise is a Ruby gem that takes care of authentication and authorisation. 
+
+Heroku: Heroku is a platform to host websites, and has a free tier that I have utilized for this project.
+
 
 ## Project Models (R17)
 
+
+Ruby On Rails uses models to "model" data, in the form of a database. These are created, read, undated and deleted by the controller. The models I used in the final version of this app are as follows:
+
+Listings
+
+This contained the listings and their data, when they are created by users.
+
+Users
+
+This is a record of the users who sign up to Cos-Meet.
+
+
 ## Database Relations (R18)
+
+The relations of my database are:
+
+Each Listing can have one and only one user
+User can have many listings
+
+Listings can have one image
+One image can belong to one and only one listing
+
 
 ## Database schema design (R19)
 
